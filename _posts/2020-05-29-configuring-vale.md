@@ -1,11 +1,16 @@
 ---
 layout: post
-title: "Configuring the Vale CLI"
+title: "Testing docs with Vale - Part 2: Configuring the Vale CLI"
+excerpt: In this part, you'll learn how to configure the Vale CLI for your documentation needs.
 ---
 
-As I mentioned in the first part of the series, in the second part, you'll learn how to configure the Vale CLI for your documentation needs. Before you dive into the tutorial, you need to learn a thing or two about the file that makes linting with Vale possible: the `.vale.ini` file.
+In this series, you'll learn how to configure and customize Vale to lint Markdown files.
 
-## What is the .vale.ini file?
+Part 1: Installing the Vale CLI
+
+Welcome to part two! In this part, you'll learn how to configure the Vale CLI for your documentation needs. Before you dive into the tutorial, you need to learn a thing or two about the file that makes linting with Vale possible: the `.vale.ini` file.
+
+# What is the .vale.ini file?
 
 The `.vale.ini` file is a configuration file that tells Vale what files to **lint**, or check, what styles to conform to, and what rules to ignore. Essentially, it controls everything Vale does for you. The `.ini` extension indicates that this is an [**initialization**](https://www.lifewire.com/how-to-open-edit-ini-files-2622755) file.
 
