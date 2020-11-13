@@ -1,11 +1,11 @@
 # Sample site navigation bar links
 
-- title: Home
+- title: Blog
   url: /
 - title: About
   url: /about/
-- title: Posts Archive
-  url: /posts/
+- title: Archive
+  url: /archive/
 - title: Toolbox
   url: /resources/
 # - title: Categories
