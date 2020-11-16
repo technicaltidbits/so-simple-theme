@@ -59,3 +59,13 @@ In the `test` stage, you'd add steps that actually runs these tools against your
 What I'd like to do, I think, is use Vale with Bitbucket pipelines. The developers I work with are the ones who write first drafts of our documentation; perhaps upon each push to our shared repository, Bitbucket pipelines can run Vale and a Markdown link checker to look for any grammar, syntax, or style errors, and then deliver a report to let them know what errors (if any) were found.
 
 There's so much to learn here. Like I said, I'll probably revisit this post as I gain a greater understanding of CI/CI and pipelines.
+
+## Sources
+
+Here's a list of all the various sources I used to help me write this post:
+
+* [CI/CD: Continuous Integration & Delivery Explained](https://semaphoreci.com/cicd)
+* [What’s the Difference Between Continuous Integration, Continuous Deployment and Continuous Delivery?](https://semaphoreci.com/blog/2017/07/27/what-is-the-difference-between-continuous-integration-continuous-deployment-and-continuous-delivery.html)
+* [Job Lifecycle](https://docs.travis-ci.com/user/job-lifecycle/)
+* [Continuous integration](https://www.thoughtworks.com/continuous-integration)
+* [Continuous Integration Essentials](https://codeship.com/continuous-integration-essentials#:~:text=Continuous%20Integration%20(CI)%20is%20a,CI%20it%20is%20typically%20implied.)
