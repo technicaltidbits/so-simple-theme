@@ -39,3 +39,5 @@ Over the last nine months or so, I've been compiling a list of resources for som
 * The basics of frontend web development: HTML, CSS, and JavaScript
 * DITA XML—consider learning the basics; if you find yourself interested in more and want to work in a DITA shop, then do a deep dive
 * Static Site Generators (SSGs): includes Hugo, Jekyll, Gatsby, MkDocs, and Vuepress
+* Continuous integration (CI)
+* Continuous deployment (CD)
