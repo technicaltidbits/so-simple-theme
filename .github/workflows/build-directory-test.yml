@@ -1,7 +1,7 @@
 name: build-directory-test
 on: push
 jobs:
-  build-jekyll blog:
+  build-jekyll-blog:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
