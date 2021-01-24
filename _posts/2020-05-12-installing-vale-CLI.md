@@ -7,7 +7,7 @@ tags: [testing, vale, docs-as-code, QA]
 excerpt: In this tutorial, you'll learn how to install Vale, a style linter. In part one, you'll learn how to use a package manager to install Vale on your Mac or PC.
 ---
 
-In this tutorial, you'll learn how to install Vale, a style linter. This tool allows you to lint your doc files. I've planned four parts for this series:
+In this tutorial, you'll learn how to install Vale, a style linter. This tool allows you to lint your doc files. There are four parts for this series:
 
 * Part 1: **Installing the Vale CLI**.\
   In this part, you'll learn how to use a package manager to install Vale on your Mac or PC.
