@@ -12,7 +12,7 @@ Welcome to part two! In this part, you'll learn how to configure the Vale CLI fo
 
 # What is the .vale.ini file?
 
-The `.vale.ini` file is a configuration file that tells Vale what files to **lint**, or check, what styles to conform to, and what rules to ignore. Essentially, it controls everything Vale does for you. The `.ini` extension indicates that this is an [**initialization**](https://www.lifewire.com/how-to-open-edit-ini-files-2622755) file.
+The `.vale.ini` file is a configuration file that tells Vale what files to **lint**, or check, what styles to conform to, and what rules to ignore. Essentially, it controls everything Vale does for you. The `.ini` extension means that this is an [**initialization**](https://www.lifewire.com/how-to-open-edit-ini-files-2622755) file.
 
 ## .vale.ini features
 
