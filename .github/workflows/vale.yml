@@ -2,19 +2,20 @@ name: Linting
 on: push
 jobs:
   vale: # name of job
+  build:
+    if: "!contains(github.event.commits[0].message, '[skip ci]')"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Get Changed Files
         id: get_changed_files
-        uses: lots0logs/gh-action-get-changed-files@2.1.4
+        uses: jitterbit/get-changed-files@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          format: 'json'
       - name: Vale
         uses: errata-ai/vale-action@v1.3.0
         with:
-          files: '${{ steps.get_changed_files.outputs.all }}'
+          files: '${{ steps.get_changed_files.outputs.added_modified }}'
         env:
-        # Required
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
