@@ -1,8 +1,10 @@
-name: build-directory-test
+name: build-site
 on: push
 jobs:
-  build-jekyll-blog: # name of job
+  build:
+    if: "!contains(github.event.commits[0].message, '[skip ci]')"
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
