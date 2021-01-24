@@ -1,0 +1,12 @@
+name: Linting
+on: push
+jobs:
+  vale: # name of job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run vale
+        uses: errata-ai/vale-action@v1.3.0
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
