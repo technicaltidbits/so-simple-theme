@@ -13,3 +13,43 @@ I initially wanted to use Travis CI because I was familiar with it, but after a 
 
 It took me a while to get through the documentation and fix a few bugs, but I got a few workflows set up over the weekend. Here's what I learned.
 
+## Setting up workflows
+
+All of your GitHub workflows belong in the `.github/workflows` directory in your repository. Each workflow is its own `.yml` file. Here's my directory structure:
+
+```
+.
+├── build-directory-test.yml
+├── link-checker.yml
+└── vale.yml
+```
+
+Just three workflows right now: one that makes sure my site builds, another to check all links in my Markdown files, and another to check spelling, grammar, and style. At some point, I'll probably combine these all into one file called `doc_tests.yml`.
+
+### Workflow structure
+
+Each workflow generally follows the same structure. Here's my Vale workflow:
+
+```
+name: linting
+on: push
+jobs:
+  build:
+    if: "!contains(github.event.commits[0].message, '[skip ci]')"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Get Changed Files
+        id: get_changed_files
+        uses: jitterbit/get-changed-files@v1
+        with:
+          format: 'json'
+      - name: Vale
+        uses: errata-ai/vale-action@v1.3.0
+        with:
+          files: '${{ steps.get_changed_files.outputs.added_modified }}'
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+```
