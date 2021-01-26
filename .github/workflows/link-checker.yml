@@ -1,5 +1,9 @@
 name: link-checker
-on: push
+on: 
+  push:
+    branches: 
+      - main
+
 jobs:
   build:
     if: "!contains(github.event.commits[0].message, '[skip ci]')"
@@ -7,8 +11,8 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Install node
-        uses: actions/setup-node@v2
-      - name: Install Markdown link checker
-        run: npm install markdown-link-checker
+        uses: actions/checkout@master
+      - name: Run link check
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          check-modified-files-only: 'yes'
