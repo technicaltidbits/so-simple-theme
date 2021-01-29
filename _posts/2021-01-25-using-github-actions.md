@@ -28,7 +28,7 @@ Just three workflows right now: one that makes sure my site builds, another to c
 
 ### Workflow structure
 
-Each workflow generally follows the same structure. Here's my Vale workflow:
+Each workflow generally follows the same structure. Here's my Vale workflow. I'll break down all the important parts below the code sample.
 
 ```
 name: linting
@@ -53,3 +53,45 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
+
+So first, you see the `name` property. This sets the name of the workflow (in this case, "linting").
+
+Next is the `on` property. It defines the GitHub event that triggers the workflow. In this example, a `push` to my blog's repository (on any branch) triggers the "linting" workflow.
+
+If I wanted this workflow to run on every push and pull request, I could change it to:
+
+```
+on: [push, pull_request]
+```
+
+Next is the main part of the workflow: the `jobs` section.
+
+#### Jobs
+
+In the `jobs` section, there's a job called `build`. Below that is an if statement:
+
+```
+if: "!contains(github.event.commits[0].message, '[skip ci]')"
+```
+
+This line of code says, "if the comment message does *not* contain the phrase [skip ci], run this job."
+
+Sometimes you may not want a certain workflow to run. For example, if I'm editing a `.yml` file or an `.html` file, I don't want my linting workflow to run, so I'll add "[skip ci]" to the commit message.
+
+Inside the `build` job is the required `runs-on` property, which defines the machine to run the job on:
+
+```bash
+runs-on: ubuntu-latest # options include windows-latest or macos-11.0
+```
+
+And below that are the `steps` for the `build` job.
+
+#### Steps
+
+You can have any many steps as you want in a workflow; however, the more steps you have, the longer it will take for the workflow to run.
+
+This particular workflow has three steps: "Checkout", "Get Changed Files", and "Vale."
+
+The "Checkout" step essentially checks out the repo.
+
+The "Get Changed File" step
