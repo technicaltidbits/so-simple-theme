@@ -94,7 +94,7 @@ author:
   name: Deanna
   picture: /images/deanna-thompson.png
   email: technicaltidbits@gmail.com
-  twitter:
+  twitter: https://www.twitter.com/itsdeannat
   links:
     - title:
       url:
@@ -105,3 +105,10 @@ footer_links:
   - title: Feed
     url: atom.xml
     icon: fas fa-rss-square
+  - title: Twitter
+    url: https://www.twitter.com/itsdeannat
+    icon: fab fa-twitter-square
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/thompsdc
+    icon: fab fa-linkedin-in
+
