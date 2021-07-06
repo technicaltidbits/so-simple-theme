@@ -3,12 +3,12 @@ layout: post
 title: "Tech Writer's Toolbox"
 ---
 
-Over the last nine months or so, I've been compiling a list of resources for someone looking to transition into the software tech writing world. I found it difficult to know where to start when I got my first technical writing job. This is an ever-evolving list!
+I've been compiling a list of resources for someone looking to transition into the software tech writing world. I found it difficult to know where to start when I got my first technical writing job. This is an ever-evolving list!
 
 ## Project management
 
 * Asana and Trello: Kanban-style project management
-* Confluence: notes, project planning, great for creating templates
+* Confluence: notes, project planning, great for creating templates and documentation
 * JIRA: Kanban-style project management, user stories, epics
 
 ## Books
@@ -28,7 +28,8 @@ Over the last nine months or so, I've been compiling a list of resources for som
 * Code editors: Visual Studio Code, Atom
 * Graphics: Snagit, OmniGraffle, Adobe Photoshop
 * Authoring tools: oXygen XML Editor, MadCap Flare, RoboHelp
-* API development: Postman
+* API testing: Postman
+* API development: Swagger
 * Testing documentation: Vale, write-good linter
 
 ## Other tools, skills, languages to know
