@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tech Writer's Toolbox"
+title: "Tech writing resources"
 ---
 
 I've been compiling a list of resources for someone looking to transition into the software tech writing world. I found it difficult to know where to start when I got my first technical writing job. This is an ever-evolving list!
