@@ -32,14 +32,15 @@ If you'd like to learn more about how I built a customized style guide for my te
 
 ## Testing tutorials
 
-As a technical writer, one of my 
+As the user advocate, I regularly test all tutorials to make sure there are no gaps in the material, that the instructions are easy to follow, and most importantly, that they *work*. When testing tutorials, I put myself into the user's shoes as much as possible.
 
-* making assumptions
-* not clear when you're supposed to do something
-* testing for technical accuracy, instructions are easy to follow, no gaps in material, do the instructions work, audience-appropriate writing
-* reported failing instructions, noted steps to reproduce issue
-* quality assurance methodology -> test case template, bug reporting
+When testing tutorials, I check for the following:
 
+* **That we're not making any assumptions**: sometimes we assume users know where some UI element is, or understand what some command means when we haven't given them proper context.
+* **That the expected result and actual result are the same**: if the tutorial instructions say that users should see a dialog box after submitting a form but they don't, that means the instructions have failed.
+* **That code samples have no typos**: I do look at code samples in README files to make sure that variable or method names aren't misspelled.
+
+If the tutorial instructions fail or if some parts of the tutorial need further clarification, I always reach out to my SMEs. `
 ## User guides ???
 
 * wrote two user guides for two different audiences for one of our B2B clients
@@ -56,12 +57,7 @@ Our documentation didn't have a consistent writing style, voice, or tone, mostly
 
 I implemented [Vale](https://errata.ai), an open-source grammar and style linter, for our two documentation repositories. Vale is highly customizable and supports creating custom tests that you can run against your writing.
 
-Implementing the linter involved adding it to our repositories, running it against existing content, and then editing that content so it adhered to our style guide conventions.
-
-When I ran Vale against our content for the first time, it reported:
-
-* Repository 1: 409 errors, 5225 warnings and 4756 suggestions in 413 files.
-* Repository 2: 336 errors, 2576 warnings, and 3241 suggestions in 55 files.
+Implementing the linter involved adding it to our repositories, running it against existing content, and then editing that content so it adhered to our style guide conventions. When I ran Vale against our content for the first time, it reported many errors (typos, punctuation errors), warnings (terminology, word choice), and suggestions (passive voice, use of parentheses).
 
 After two months of work, I reduced the amount of errors by 56% and the amount of warnings 50% for repository 1. Errors in repository 2 decreased 86% and warnings 36%. If I had a chance to redo the project, I'd have more success with a longer timeline.
 
