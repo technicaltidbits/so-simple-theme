@@ -4,12 +4,10 @@
   url: /
 - title: Blog
   url: /blog/
-- title: Toolbox
+- title: Tech writing resources
   url: /resources/
-# - title: Portfolio
-#   url: /portfolio/
-# - title: Categories
-#   url: /categories/
+- title: Work
+  url: /work/
 # - title: Tags
 #   url: /tags/
 # - title: Recipes
